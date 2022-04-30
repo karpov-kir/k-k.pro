@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# `K3S_TOKEN` is required according to `docker-compose.yml`. A dummy value is enough to make sure the following
+# command never fails. This command just removes everything, so we do not need to use the actual token.
+echo "K3S_TOKEN=nothing" > ./.env
+docker-compose down --rmi all --volumes --remove-orphans
+rm -f ./.env
+rm -f ./kubeconfig.yaml

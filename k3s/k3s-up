@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# https://blog.snowme34.com/post/k3s-cluster-in-docker-compose-running-php-nginx/index.html
+
+if [ ! -f ./.env ]
+then
+	echo -e "K3S_TOKEN=${RANDOM}${RANDOM}${RANDOM}${RANDOM}${RANDOM}" >> ./.env
+fi
+
+export $(cat ./.env | xargs)
+
+echo "K3S_TOKEN: ${K3S_TOKEN}"
+
+docker-compose up -d --scale agent=2

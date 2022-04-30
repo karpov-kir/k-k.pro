@@ -1,8 +1,6 @@
 .idea
-node_modules
-build
-.history
-
 *.orig
 *.DS_Store
 npm-debug.log*
+.env
+./k3s/kubeconfig.yaml
