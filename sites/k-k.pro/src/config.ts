@@ -1,5 +1,5 @@
 export const config = {
-  rootNotionPageId: '6a2eae84933247fd88858ff18d63c277',
+  rootNotionPageId: '50e6c6752c0a45969810f048474e35f7',
   title: 'Kirill Karpov',
   description: 'A pragmatic software engineer',
   lang: 'en',
